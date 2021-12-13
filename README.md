@@ -24,9 +24,17 @@ Start server with the Python
 # python3 server_code.py
 ```
 Or we could start it in __docker-compose__
+```
+# sudo docker-compose -f docker-compose.yml up -d
+```
 Test on the client side
 ```
 # python3 client_test.py --list "7 5 4 1 9 8 9 7 5 4"
 # python3 client_test.py --list "10 50 20 10 25 76 89 20 20 50"
 # python3 client_test.py --list "500 400 400 100 100 700 500 400 100 900"
 ```
+Result on the server will be create after processing data for 3 users in the __final_results.txt__
+~~~
+/ # cat final_results.txt
+1 4 5 7 9, 10 10 20 25 50, 100 100 400 400 500, 4 5 7 8 9, 20 20 50 76 89, 100 400 500 700 900/ #
+~~~
