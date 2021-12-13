@@ -1,0 +1,14 @@
+version: "3"
+services:
+  server_code:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: server_code
+    container_name: server_code
+    expose:
+      - 9005
+    ports:
+      - "9005:9005"
+    container_name: server-app
+    restart: "always"
